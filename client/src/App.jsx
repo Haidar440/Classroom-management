@@ -1,13 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+// import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Signin from './pages/Signin';
+import Signup from './pages/Signup';
+import Dashboard from './pages/Dashboard';
+// import Navbar from './components/Navbar';
 function App() {
-
   return (
-    <h1>Haisi</h1>
-  )
+    <BrowserRouter>
+      <div className="container-scroller">
+        <Routes>
+            <Route path='/' element={<Dashboard />} />
+            <Route path="/signin" element={<Signin />} />
+            <Route path="/signup" element={<Signup />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
