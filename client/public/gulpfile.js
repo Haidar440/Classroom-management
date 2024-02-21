@@ -339,7 +339,7 @@ gulp.task('copyMapFiles', function() {
         .pipe(gulp.dest('./vendors/jquery-asColorPicker'));
     var map6 = gulp.src('node_modules/jquery-asColorPicker/dist/css/asColorPicker.min.css.map')
         .pipe(gulp.dest('./vendors/jquery-asColorPicker/css'));
-    var map7 = gulp.src('node_modules/jquery-asColor/dist/jquery-asColor.min.js.map')
+    var map7 = gulp.src('node_modules/jquery-asColor/dist/jquery-asColor.min.js.map')                                               
         .pipe(gulp.dest('./vendors/jquery-asColor'));
     var map8 = gulp.src('node_modules/jquery-bar-rating/dist/jquery.barrating.min.js.map')
         .pipe(gulp.dest('./vendors/jquery-bar-rating'));
