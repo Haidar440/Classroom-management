@@ -18,3 +18,15 @@ app.listen(3000, () => {
 
 app.use('/',userRoute);
 app.use('/api/auth',authRoute);
+
+
+app.use((err,req,res,next) => {
+    const statusCode = err.statusCode || 500;
+    const message = err.message || "Internet Server Error"
+    return res.status(statusCode).json({
+        sucesss:false,
+        message,
+        statusCode
+        
+    })
+})
